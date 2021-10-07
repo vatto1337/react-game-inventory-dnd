@@ -1,0 +1,85 @@
+body {
+  background: rgb(34, 33, 33);
+  color: #fff;
+}
+
+.app-container {
+  height: 100vh;
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory {
+  height: 455px;
+  width: 500px;
+  background: rgba(255,255,255, 0.03);
+  border: solid 1px rgba(255,255,255, 0.09);
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item-slot {
+  display: inline-block;
+  height: 90px;
+  width: 20%;
+  padding: 3px;
+  box-sizing: border-box;
+  /* margin: 2px; */
+  cursor: pointer;
+}
+
+.item-slot.empty {
+  cursor: default;
+}
+
+.item-slot.being-moved .img {
+  display: none;
+}
+
+.item-slot.being-dragged {
+  position: absolute;
+  cursor: grab;
+}
+
+.item-slot.being-dragged .content {
+  background: rgba(255,255,255, 0.40);
+}
+
+.item-slot .content {
+  content: " ";
+  background: rgba(255,255,255, 0.09);
+  border: solid 1px rgba(255,255,255, 0.03);
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.item-slot .content .img {
+  height: 90%;
+  width: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.destination-area-example {
+  background: rgba(255,255,255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: solid 1px rgba(255,255,255, 0.09);
+  border-radius: 6px;
+  margin-right: 8px;
+}

@@ -1,0 +1,1 @@
+<h6>A simple drag and drop inventory example for alt:V Developers.</h6>
